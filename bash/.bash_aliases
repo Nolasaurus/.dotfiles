@@ -4,8 +4,17 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias --="cd -"                  # Go to previous dir with -
 
-alias l="ls -lh"           # Display detailed list with human-readable file sizes.
-alias la="ls -lAh"         # Display detailed list including hidden files with human-readable sizes.
+# Use colors in coreutils utilities output
+alias ls='ls --color=auto'
+alias grep='grep --color'
+
+# ls aliases
+alias ll='ls -lah'
+alias la='ls -A'
+
+# Aliases to protect against overwriting
+alias cp='cp -i'
+alias mv='mv -i'
 
 alias untar="tar -xzvf"
 alias update="sudo apt update && sudo apt upgrade -y"
@@ -13,11 +22,15 @@ alias update="sudo apt update && sudo apt upgrade -y"
 # list of ports in use
 alias ports="netstat -tulanp"
 
+alias gh='history|grep'
 
 alias p="cd ~/projects"
 alias g="git"
 alias gs="git status"
 alias gb="git branch"
+
+alias ve='python3 -m venv ./venv'
+alias va='source ./venv/bin/activate'
 
 
 # IP addresses
