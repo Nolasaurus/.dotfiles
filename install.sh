@@ -11,10 +11,6 @@ if ! [ -x "$(command -v git)" ]; then
   exit 1
 fi
 
-# Clone dotfiles repository (assuming it's hosted on GitHub)
-echo "${GREEN}Cloning dotfiles...${NC}"
-git clone git@github.com:nolasaurus/.dotfiles.git ~/.dotfiles
-
 # Create symlinks in the home directory pointing to files in ~/dotfiles/
 echo "${GREEN}Creating symlinks in the home directory...${NC}"
 ln -s ~/.dotfiles/.bashrc ~/.bashrc
