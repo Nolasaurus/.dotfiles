@@ -5,19 +5,25 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
-# Check if git is installed
-if ! [ -x "$(command -v git)" ]; then
-  echo "${RED}Error:${NC} git is not installed." >&2
-  exit 1
-fi
+# Check if a file exists and prompt to overwrite
+create_symlink() {
+  if [ -e "$2" ]; then
+    read -p "$2 already exists. Do you want to overwrite it? (y/n) " choice
+    case "$choice" in
+      y|Y ) ln -sf "$1" "$2";;
+      * ) echo "Skipping $2";;
+    esac
+  else
+    ln -s "$1" "$2"
+  fi
+}
 
-# Create symlinks in the home directory pointing to files in ~/dotfiles/
 echo "${GREEN}Creating symlinks in the home directory...${NC}"
-ln -s ~/.dotfiles/.bashrc ~/.bashrc
-ln -s ~/.dotfiles/.bash_aliases ~/.bash_aliases
-ln -s ~/.dotfiles/.bash_functions ~/.bash_functions
-ln -s ~/.dotfiles/.bash_profile ~/.bash_profile
-# ... Add other dotfiles you want to symlink ...
+create_symlink ~/.dotfiles/.bashrc ~/.bashrc
+create_symlink ~/.dotfiles/.bash_aliases ~/.bash_aliases
+create_symlink ~/.dotfiles/.bash_functions ~/.bash_functions
+create_symlink ~/.dotfiles/.bash_profile ~/.bash_profile
+
 
 # Source the bashrc to apply changes
 source ~/.bashrc
