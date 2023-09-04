@@ -19,10 +19,10 @@ create_symlink() {
 }
 
 echo "${GREEN}Creating symlinks in the home directory...${NC}"
-create_symlink ~/.dotfiles/.bashrc ~/.bashrc
-create_symlink ~/.dotfiles/.bash_aliases ~/.bash_aliases
-create_symlink ~/.dotfiles/.bash_functions ~/.bash_functions
-create_symlink ~/.dotfiles/.bash_profile ~/.bash_profile
+create_symlink ~/.dotfiles/bash/.bashrc ~/.bashrc
+create_symlink ~/.dotfiles/bash/.bash_aliases ~/.bash_aliases
+create_symlink ~/.dotfiles/bash/.bash_functions ~/.bash_functions
+create_symlink ~/.dotfiles/bash/.bash_profile ~/.bash_profile
 
 
 # Source the bashrc to apply changes
