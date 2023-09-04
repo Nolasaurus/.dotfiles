@@ -1,0 +1,28 @@
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias --="cd -"                  # Go to previous dir with -
+
+alias l="ls -lh"           # Display detailed list with human-readable file sizes.
+alias la="ls -lAh"         # Display detailed list including hidden files with human-readable sizes.
+
+alias untar="tar -xzvf"
+alias update="sudo apt update && sudo apt upgrade -y"
+
+# list of ports in use
+alias ports="netstat -tulanp"
+
+
+alias p="cd ~/projects"
+alias g="git"
+alias gs="git status"
+alias gb="git branch"
+
+
+# IP addresses
+alias ip="curl -s http://icanhazip.com"
+alias localip="hostname -I | awk '{print $1}'"
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}' 
