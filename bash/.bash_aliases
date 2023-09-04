@@ -2,7 +2,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias --="cd -"                  # Go to previous dir with -
 
 # Use colors in coreutils utilities output
 alias ls='ls --color=auto'
