@@ -5,7 +5,7 @@
 (requires an SSH key in [Github > Settings > Profile > SSH and GPG keys](https://github.com/settings/keys)):
 1. **Clone the Dotfiles Repository**:
    ```bash
-   git clone git@github.com:Nolasaurus/.dotfiles.git
+   git clone git@github.com:Nolasaurus/.dotfiles
    ```
 2. **Execute the Installation Script**:
    ```bash
@@ -23,7 +23,7 @@ or
 ## Using HTTPS:
 1. **Clone the Dotfiles Repository using HTTPS**:
    ```bash
-   git clone https://github.com/Nolasaurus/.dotfiles.git
+   git clone https://github.com/Nolasaurus/.dotfiles
    ```
    
 2. **Execute the Installation Script**:
