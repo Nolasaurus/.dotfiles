@@ -1,7 +1,5 @@
 
 ###### .dotfiles
-
-# Install
 1. Clone dotfiles repo
 2. Execute install script
 3. Source the bash config / install 
