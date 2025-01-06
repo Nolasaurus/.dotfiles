@@ -11,7 +11,7 @@
 
    ```bash
    git clone git@github.com:Nolasaurus/.dotfiles
-   bash ~/.dotfiles/install.sh
+   bash ~/.dotfiles/bash/install.sh
    source ~/.bashrc
    ```
 
@@ -19,7 +19,7 @@
 ### Using HTTPS:
    ```bash
    git clone https://github.com/Nolasaurus/.dotfiles
-   bash ~/.dotfiles/install.sh
+   bash ~/.dotfiles/bash/install.sh
    source ~/.bashrc
    ```
 
